@@ -19,7 +19,7 @@ import itemn16 from "../assests/gridsix.webp";
 
 
 export default  {
-    "New_Arrivals": [
+    New_Arrivals: [
       {
         img: `${item1}`,
         id: 1,

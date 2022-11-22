@@ -1,16 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ProductsData from "./ProductsData";
+import ProductBuydata from "./ProductBuydata";
+
 export default function ProductDetail() {
-  //   const { productId } = useParams();
-  //   console.log(productId);
+  const { productId } = useParams();
+  const data = ProductBuydata;
+  const product = data.find((item) => item.id === productId);
+  console.log(product);
 
-  //   const product = ProductsData.entries().find((product) => {
-  //     return product.id === productId;
-  //   });
-  //   console.log(product);
-
-  //   const data = ProductsData.find((item) => item.id === id);
-  //   console.log(data, "data");
-  return <div>ProductDetails</div>;
+  return (
+    <>
+      <div>
+        {/* <img src={product.img} alt="images" width="100%" /> */}
+        {/* <h1>{product.title}</h1>
+        <h1>{product.price}</h1>
+        <h1>{product.stock}</h1> */}
+      </div>
+    </>
+  );
 }

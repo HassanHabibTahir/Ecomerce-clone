@@ -31,6 +31,18 @@ let theme = createTheme({
     h6: {
       fontSize: "12px",
     },
+    h7: {
+      fontSize: "18px",
+      fontWeight: 300,
+    },
+    h8: {
+      fontSize: "18px",
+      fontWeight: 600,
+    },
+    h9: {
+      fontSize: "14px",
+      fontWeight: 300,
+    },
   },
 });
 

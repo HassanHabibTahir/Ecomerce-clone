@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
+// import CountUp from "react-countup";
+// import VisibilitySensor from "react-visibility-sensor";
 import img from "../assests/rfq.png";
 import imgtwo from "../assests/rfqimg.png";
 
 export default function Quotation() {
+  const matches = useMediaQuery("(max-width:900px)");
   return (
     <>
       <Box
@@ -38,12 +39,19 @@ export default function Quotation() {
           <Typography variant="h2">Request for Quotation</Typography>
         </Box>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Box>
-              <img src={imgtwo} alt="imgtwo" width="100%" />
+              <img
+                src={imgtwo}
+                alt="imgtwo"
+                style={{
+                  width: matches ? "100%" : "670px",
+                  // width: "100%",
+                }}
+              />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Box
               sx={{
                 backgroundColor: "white",

@@ -11,7 +11,7 @@ import boxone from "../assests/boxone.jpg";
 import boxtwo from "../assests/boxtwo.jpg";
 
 import Quotation from "./Quotation";
-import { Link } from "react-router-dom";
+import BuyProduct from "./BuyProduct";
 
 let product = [
   "Consumers Electronics",
@@ -266,56 +266,48 @@ export default function Slider() {
                           {displayproduct[item].map(
                             ({ img, price, status, id }, i) => {
                               return (
-                                <Link
-                                  to={`/product/${id}`}
-                                  style={{
-                                    textDecoration: "none",
-                                    color: "black",
+                                <Box
+                                  key={i}
+                                  sx={{
+                                    backgroundColor: "white",
+                                    p: "2px",
                                   }}
                                 >
                                   <Box
-                                    key={i}
                                     sx={{
-                                      backgroundColor: "white",
-                                      p: "2px",
+                                      backgroundColor: "#F2F3F7",
+                                      py: "5px",
+                                      px: "5px",
+                                      width: "100%",
+                                      transition: "0.3s",
+
+                                      cursor: "pointer",
+                                      "&:hover": {
+                                        transform: "scale(1.1)",
+                                      },
                                     }}
                                   >
-                                    <Box
-                                      sx={{
-                                        backgroundColor: "#F2F3F7",
-                                        py: "5px",
-                                        px: "5px",
-                                        width: "100%",
-                                        transition: "0.3s",
-
-                                        cursor: "pointer",
-                                        "&:hover": {
-                                          transform: "scale(1.1)",
-                                        },
-                                      }}
-                                    >
-                                      <img src={img} alt="img" />
-                                    </Box>
-                                    <Typography
-                                      variant="h5"
-                                      sx={{
-                                        textAlign: "center",
-                                        mt: "10px",
-                                      }}
-                                    >
-                                      {price}
-                                    </Typography>
-                                    <Typography
-                                      variant="h6"
-                                      sx={{
-                                        textAlign: "center",
-                                        mb: "5px",
-                                      }}
-                                    >
-                                      {status}
-                                    </Typography>
+                                    <img src={img} alt="img" />
                                   </Box>
-                                </Link>
+                                  <Typography
+                                    variant="h5"
+                                    sx={{
+                                      textAlign: "center",
+                                      mt: "10px",
+                                    }}
+                                  >
+                                    {price}
+                                  </Typography>
+                                  <Typography
+                                    variant="h6"
+                                    sx={{
+                                      textAlign: "center",
+                                      mb: "5px",
+                                    }}
+                                  >
+                                    {status}
+                                  </Typography>
+                                </Box>
                               );
                             }
                           )}
@@ -328,6 +320,9 @@ export default function Slider() {
             </Box>
             <Box>
               <Quotation />
+            </Box>
+            <Box>
+              <BuyProduct />
             </Box>
           </Container>
         </Box>
