@@ -1,0 +1,126 @@
+{
+    "New_Arrivals": [
+      {
+        "img": "/assests/d1.webp",
+        "id": "1",
+        "price": "$ 8",
+        "status": "Trending"
+      },
+      {
+        "img": "/assests/d2.webp",
+        "id": "2",
+        "price": "$ 10",
+        "status": "Trending"
+      },
+      {
+        "img": "/assests/d3.webp",
+        "id": "3",
+        "price": "$ 12",
+        "status": "Trending"
+      }
+    ],
+  
+    "Top-ranking": [
+      {
+        "img": "/assests/d4.webp",
+        "id": "4",
+        "price": "$ 0.99",
+       " status": "10 pieces"
+      },
+      {
+        "img": "/assests/d5.webp",
+        "id": "5",
+        "price": "$ 14",
+        "status": "1 pieces"
+      },
+      {
+        "img": "/assests/d6.webp",
+        "id": "6",
+        "price": "$ 9",
+        "status": "10 pieces"
+      }
+    ],
+  
+    "Personal Protective Equipment": [
+      {
+        "img": "/assests/d7.webp",
+        "id": "7",
+        "price": "$ 0.99",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d8.webp",
+        "id": "8",
+        "price": "$ 11",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d9.webp",
+        "id": "9",
+        "price": "$ 20",
+        "status": "In Stock"
+      }
+    ],
+    "Dropshipping": [
+      {
+        "img": "/assests/d10.webp",
+        "id": "10",
+        "price": "$ 0.99",
+  
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d11.webp",
+        "id": "11",
+        "price": "$ 11",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d12.webp",
+        "id": "12",
+        "price": "$ 20",
+        "status": "In Stock"
+      }
+    ],
+    "Regional specialties": [
+      {
+        "img": "/assests/d13.webp",
+        "id": "13",
+        "price": "$ 0.99",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d14.webp",
+        "id": "14",
+        "price": "$ 11",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d15.webp",
+        "id": "15",
+        "price": "$ 20",
+        "status": "In Stock"
+      }
+    ],
+    "Tips": [
+      {
+        "img":"/assests/d16.webp" ,
+        "id": "16",
+        "price": "$ 0.99",
+        "status": "In Stock"
+      },
+  
+      {
+        "img": "/assests/d1.webp",
+        "id": "17",
+        "price": "$ 11",
+        "status": "In Stock"
+      },
+      {
+        "img": "/assests/d2.webp",
+        "id": "18",
+        "price": "$ 20",
+        "status": "In Stock"
+      }
+    ]
+  }
