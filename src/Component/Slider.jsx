@@ -1,12 +1,11 @@
+import React, { useEffect } from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import axios from "axios";
 
-import ProductsData from "./ProductsData";
-import React from "react";
-import Slideritem from "./Slideritem";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import EastIcon from "@mui/icons-material/East";
-
 import "./product.css";
+import Slideritem from "./Slideritem";
 import boxone from "../assests/boxone.jpg";
 import boxtwo from "../assests/boxtwo.jpg";
 
@@ -25,7 +24,16 @@ let product = [
 ];
 
 export default function Slider() {
-  const displayproduct = ProductsData;
+  const [displaypro, setDisplaypro] = React.useState([]);
+  const getProduct = async () => {
+    await axios.get("http://localhost:3000/displayproduct").then((res) => {
+      setDisplaypro(res.data);
+    });
+  };
+  useEffect(() => {
+    getProduct();
+  }, []);
+  const displayproduct = displaypro;
 
   return (
     <>
@@ -287,7 +295,10 @@ export default function Slider() {
                                       },
                                     }}
                                   >
-                                    <img src={img} alt="img" />
+                                    <img
+                                      src={" http://localhost:3000" + img}
+                                      alt="img"
+                                    />
                                   </Box>
                                   <Typography
                                     variant="h5"

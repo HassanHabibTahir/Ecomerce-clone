@@ -1,12 +1,20 @@
 import React from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
-
-import ProductBuydata from "./ProductBuydata";
+import { Box, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export default function BuyProduct() {
-  const data = ProductBuydata;
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from "../Reduxtoolkit/ProductSlice";
 
+export default function BuyProduct() {
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchProducts());
+  });
+  const Products = useSelector((state) => state.products.data);
+
+  const data = Products;
+  // console.log(Products, "Products--->");
   return (
     <>
       <Box
@@ -15,7 +23,7 @@ export default function BuyProduct() {
         }}
       >
         <Grid container spacing={2}>
-          {data.map(({ img, title, price, stock, id }, i) => {
+          {data?.map(({ img, title, price, stock, id }, i) => {
             return (
               <Grid item xs={6} sm={4} md={2}>
                 <Link
@@ -28,6 +36,7 @@ export default function BuyProduct() {
                   <Box
                     key={i}
                     sx={{
+                      borderRadius: "10px",
                       backgroundColor: "white",
                       border: "1px solid #DCDEE3",
                       transition: "box-shadow .3s",
@@ -41,7 +50,11 @@ export default function BuyProduct() {
                         pt: "10px",
                       }}
                     >
-                      <img src={img} alt="images" width="100%" />
+                      <img
+                        src={"http://localhost:3000" + img}
+                        alt="images"
+                        width="100%"
+                      />
                     </Box>
                     <Typography
                       sx={{

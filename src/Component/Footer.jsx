@@ -43,6 +43,7 @@ export default function Footer() {
       <Box
         sx={{
           mt: "50px",
+
           backgroundColor: "#445268",
           color: "white",
         }}
@@ -50,6 +51,7 @@ export default function Footer() {
         <Box
           sx={{
             pt: "50px",
+            px: { xs: "30px", md: "0px" },
           }}
         >
           <Typography
@@ -114,7 +116,7 @@ export default function Footer() {
           <Grid
             container
             spacing={1}
-            justifyContent="center"
+            // justifyContent="center"
             sx={{
               borderBottom: "1px solid #313D52",
             }}
@@ -123,7 +125,7 @@ export default function Footer() {
               return (
                 <Grid
                   item
-                  xs={6}
+                  xs={4}
                   sm={4}
                   md={2}
                   sx={{

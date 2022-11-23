@@ -12,11 +12,13 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import LoginIcon from "@mui/icons-material/Login";
+import { useSelector } from "react-redux";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 
 import logo from "../assests/logo.png";
 import Draw from "./Draw";
 export default function Nav() {
+  const select = useSelector((state) => state.cart);
   const matches = useMediaQuery("(max-width:900px)");
   return (
     <>
@@ -338,22 +340,31 @@ export default function Nav() {
                         Oders
                       </Typography>
                     </Box>
-                    <Box>
-                      <ShoppingCartCheckoutIcon
-                        sx={{
-                          fontSize: "30px",
-                          mt: "12px",
-                        }}
-                      />
-                      <Typography
-                        sx={{
-                          fontSize: "12px",
-                          color: "rbga(0,0,0,0.5)",
-                        }}
-                      >
-                        Cart
-                      </Typography>
-                    </Box>
+                    <Link
+                      to="/cart"
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box>
+                        <ShoppingCartCheckoutIcon
+                          sx={{
+                            fontSize: "30px",
+                            mt: "12px",
+                            color: select?.length ? "red" : "",
+                          }}
+                        />
+                        <Typography
+                          sx={{
+                            fontSize: "12px",
+
+                            color: select?.length ? "red" : "",
+                          }}
+                        >
+                          Cart {select?.length}
+                        </Typography>
+                      </Box>
+                    </Link>
                   </Box>
                 </Grid>
               </Grid>
