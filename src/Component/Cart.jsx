@@ -1,13 +1,20 @@
-import { Container, Grid, Box, Typography, Button } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Box,
+  Typography,
+  Button,
+  useMediaQuery,
+} from "@mui/material";
 // import React, { useCallback, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removefromcart } from "../Reduxtoolkit/Cart";
 
 export default function Cart() {
   //   const [getData, setGetData] = React.useState();
-
+  const matches = useMediaQuery("(max-width:600px)");
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  let cart = useSelector((state) => state.cart);
 
   const handleRemoveCart = (id) => {
     dispatch(removefromcart(id));
@@ -18,12 +25,15 @@ export default function Cart() {
     <>
       <Container maxWidth="lg">
         <Grid container>
-          {cart?.map((item) => {
+          {cart?.map((item, i) => {
             return (
               <Grid
+                key={i}
                 item
                 md={12}
                 lg={12}
+                sm={12}
+                xs={12}
                 sx={{
                   my: "50px",
                   borderBottom: "1px solid #DCDEE3",
@@ -32,26 +42,48 @@ export default function Cart() {
                 <Box
                   sx={{
                     display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
+                    flexDirection: { xs: "column", md: "row" },
+                    justifyContent: { xs: "center", md: "space-between" },
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
                     <img
                       src={"http://localhost:3000" + item?.img}
                       alt="images"
-                      width="80%"
+                      style={{
+                        width: matches ? "80%" : "100%",
+                      }}
                     />
                   </Box>
 
-                  <Typography variant="h2">{item?.title}</Typography>
-                  <Typography variant="h2">{item?.price}</Typography>
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      mt: { xs: "20px", md: "0px" },
+                    }}
+                  >
+                    {item?.title}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      mt: { xs: "20px", md: "0px" },
+                    }}
+                    variant="h2"
+                  >
+                    {item?.price}
+                  </Typography>
 
                   <Button
-                    onClick={() => handleRemoveCart(item?.id)}
+                    onClick={() => handleRemoveCart(i)}
                     sx={{
                       //   mt: "60px",
+                      mt: { xs: "20px", md: "0px" },
                       color: "white",
                       backgroundColor: "#FF6A00",
                       //   px: "10px",

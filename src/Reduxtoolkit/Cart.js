@@ -21,8 +21,11 @@ const UserSlice=createSlice({
             Setlocalstorage(state)
         },
         removefromcart:(state,action)=>{
-            state=state.filter((item)=>item.id!==action.payload)
-            Setlocalstorage(state)
+            const indexs=state.filter((item,i)=>i!==action.payload)
+            if(indexs){
+                Setlocalstorage(indexs)
+                return indexs
+            }
         },
     }
 })

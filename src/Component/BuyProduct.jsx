@@ -10,7 +10,7 @@ export default function BuyProduct() {
 
   React.useEffect(() => {
     dispatch(fetchProducts());
-  });
+  }, [dispatch]);
   const Products = useSelector((state) => state.products.data);
 
   const data = Products;
@@ -25,7 +25,7 @@ export default function BuyProduct() {
         <Grid container spacing={2}>
           {data?.map(({ img, title, price, stock, id }, i) => {
             return (
-              <Grid item xs={6} sm={4} md={2}>
+              <Grid key={i} item xs={6} sm={4} md={2}>
                 <Link
                   to={`/product/${id}`}
                   style={{
