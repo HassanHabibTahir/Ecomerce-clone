@@ -124,6 +124,7 @@ export default function Footer() {
             {Object.keys(footerdata).map((item, i) => {
               return (
                 <Grid
+                  key={i}
                   item
                   xs={4}
                   sm={4}
@@ -147,6 +148,7 @@ export default function Footer() {
                     {footerdata[item].map((item, i) => {
                       return (
                         <Typography
+                          key={i}
                           sx={{
                             fontSize: "14px",
                             mt: "10px",

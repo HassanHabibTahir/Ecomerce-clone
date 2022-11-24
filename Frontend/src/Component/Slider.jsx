@@ -82,31 +82,29 @@ export default function Slider() {
                     >
                       {product.map((item, i) => {
                         return (
-                          <>
-                            <Box
-                              key={i}
+                          <Box
+                            key={i}
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                            }}
+                          >
+                            <Typography
+                              variant="h4"
                               sx={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
+                                pt: "15px",
                               }}
                             >
-                              <Typography
-                                variant="h4"
-                                sx={{
-                                  pt: "15px",
-                                }}
-                              >
-                                {item}
-                              </Typography>
-                              <KeyboardArrowRightIcon
-                                sx={{
-                                  color: "#b3b3b3",
-                                  mt: "15px",
-                                }}
-                              />
-                            </Box>
-                          </>
+                              {item}
+                            </Typography>
+                            <KeyboardArrowRightIcon
+                              sx={{
+                                color: "#b3b3b3",
+                                mt: "15px",
+                              }}
+                            />
+                          </Box>
                         );
                       })}
                     </Box>
@@ -248,9 +246,8 @@ export default function Slider() {
               <Grid container spacing={1.5}>
                 {Object.keys(displayproduct).map((item, i) => {
                   return (
-                    <Grid item xs={12} sm={12} md={4} lg={4}>
+                    <Grid key={i} item xs={12} sm={12} md={4} lg={4}>
                       <Box
-                        key={i}
                         sx={{
                           backgroundColor: "white",
                           borderRadius: "10px",

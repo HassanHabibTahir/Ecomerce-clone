@@ -1,7 +1,5 @@
 
 const express=require('express');
-
-
 const app=express();
 const product=require('./api/product');
 const displayproduct=require('./api/displayproduct');

@@ -8,7 +8,11 @@ import {
 } from "@mui/material";
 // import React, { useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removefromcart } from "../Reduxtoolkit/Cart";
+import {
+  removefromcart,
+  increasequantity,
+  decreasequantity,
+} from "../Reduxtoolkit/Cart";
 
 export default function Cart() {
   const matches = useMediaQuery("(max-width:600px)");
@@ -77,6 +81,15 @@ export default function Cart() {
                   >
                     {item?.price}
                   </Typography>
+                  {/* //increase quantity */}
+
+                  <Button onClick={() => dispatch(increasequantity(item?.id))}>
+                    +
+                  </Button>
+                  <Typography>{item?.quantity}</Typography>
+                  <Button onClick={() => dispatch(decreasequantity(item?.id))}>
+                    -
+                  </Button>
 
                   <Button
                     onClick={() => handleRemoveCart(i)}
