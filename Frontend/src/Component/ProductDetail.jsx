@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { addtocart } from "../Reduxtoolkit/Cart";
 
 export default function ProductDetail({ data }) {
-  const matches = useMediaQuery("(max-width:900px)");
+  const matches = useMediaQuery("(max-width:600px)");
   const { productId } = useParams();
   const product = data.find((item) => item.id === productId);
 

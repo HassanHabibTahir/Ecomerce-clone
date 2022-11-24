@@ -7,11 +7,10 @@ import {
   useMediaQuery,
 } from "@mui/material";
 // import React, { useCallback, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { removefromcart } from "../Reduxtoolkit/Cart";
 
 export default function Cart() {
-  //   const [getData, setGetData] = React.useState();
   const matches = useMediaQuery("(max-width:600px)");
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
