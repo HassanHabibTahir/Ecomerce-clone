@@ -19,7 +19,7 @@ function App() {
   const data=useSelector((state)=>state.products.data)
   React.useEffect(() => {
     dispatch(fetchProducts());
-  },);
+  },[]);
 
   return (
    <>

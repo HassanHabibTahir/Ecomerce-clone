@@ -10,7 +10,7 @@ export default function BuyProduct() {
 
   React.useEffect(() => {
     dispatch(fetchProducts());
-  });
+  }, []);
   const Products = useSelector((state) => state.products.data);
 
   const data = Products;
