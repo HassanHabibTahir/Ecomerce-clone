@@ -286,7 +286,6 @@ export default function Slider() {
                                       width: "100%",
                                       transition: "0.3s",
 
-                                      cursor: "pointer",
                                       "&:hover": {
                                         transform: "scale(1.1)",
                                       },

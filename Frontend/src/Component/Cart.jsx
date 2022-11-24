@@ -79,7 +79,7 @@ export default function Cart() {
                     }}
                     variant="h2"
                   >
-                    {item?.price}
+                    ${item?.price * item?.quantity}
                   </Typography>
                   {/* //increase quantity */}
 

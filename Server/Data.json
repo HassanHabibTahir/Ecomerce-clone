@@ -10,7 +10,7 @@
     "imgsix":"/assests/p1item5.webp",
     "imgseven":"/assests/p1item6.webp",
     "title": "Door is the useful things",
-    "price": "$21",
+    "price": 21,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "10 Piece (min.order)",
     "quantity":1
@@ -19,7 +19,7 @@
     "id": "2",
     "img": "/assests/p2.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 23,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -28,7 +28,7 @@
     "id": "3",
     "img": "/assests/p3.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 27,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -37,7 +37,7 @@
     "id": "4",
     "img": "/assests/p4.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 30,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -46,7 +46,7 @@
     "id": "5",
     "img": "/assests/p5.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 21,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -55,7 +55,7 @@
     "id": "6",
     "img":"/assests/p6.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 40,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -64,7 +64,7 @@
     "id": "7",
     "img": "/assests/p7.webp",
     "title": "Its a best things",
-    "price": "$21",
+    "price": 49,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -73,7 +73,7 @@
     "id": "8",
     "img": "/assests/p8.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 100,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     
     "stock": "1 Piece (min.order)",
@@ -83,7 +83,7 @@
     "id": "9",
     "img": "/assests/p9.webp",
     "title": "Its a best things ",
-    "price": "$21",
+    "price":88,
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "stock": "1 Piece (min.order)",
     "quantity":1
@@ -93,7 +93,7 @@
     "img": "/assests/p10.webp",
     "title": "Its a best things ",
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
-    "price": "$21",
+    "price": 34,
     "stock": "1 Piece (min.order)",
     "quantity":1
   },
@@ -102,7 +102,7 @@
     "img": "/assests/p11.webp",
     "title": "Its a best things ",
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
-    "price": "$21",
+    "price": 33,
     "stock": "1 Piece (min.order)",
     "quantity":1
   },
@@ -111,7 +111,7 @@
     "img": "/assests/p12.webp",
     "details":"Explosion-proof doors and windows for used in industrial buildings petrochemical industry",
     "title": "Its a best things ",
-    "price": "$21",
+    "price": 77,
     "stock": "1 Piece (min.order)",
     "quantity":1
   }

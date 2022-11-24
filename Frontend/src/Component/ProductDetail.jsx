@@ -72,7 +72,7 @@ export default function ProductDetail({ data }) {
                     color: "red",
                   }}
                 >
-                  Price: {product?.price}
+                  Price: ${product?.price}
                 </Typography>
                 <Typography
                   sx={{

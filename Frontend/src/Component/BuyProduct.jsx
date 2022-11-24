@@ -10,7 +10,7 @@ export default function BuyProduct() {
 
   React.useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
   const Products = useSelector((state) => state.products.data);
 
   const data = Products;
@@ -70,7 +70,7 @@ export default function BuyProduct() {
                         mt: "20px",
                       }}
                     >
-                      {price}
+                      ${price}
                       <br />
                     </Typography>
                     <Typography
