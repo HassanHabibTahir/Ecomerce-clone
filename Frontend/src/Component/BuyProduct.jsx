@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../Reduxtoolkit/ProductSlice";
+import { url } from "./Url.js";
 
 export default function BuyProduct() {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ export default function BuyProduct() {
   const Products = useSelector((state) => state.products.data);
 
   const data = Products;
+
   // console.log(Products, "Products--->");
   return (
     <>
@@ -23,11 +25,11 @@ export default function BuyProduct() {
         }}
       >
         <Grid container spacing={2}>
-          {data?.map(({ img, title, price, stock, id }, i) => {
+          {data?.map(({ image, name, price, _id, description }, i) => {
             return (
               <Grid key={i} item xs={6} sm={4} md={2}>
                 <Link
-                  to={`/product/${id}`}
+                  to={`/product/${_id}`}
                   style={{
                     textDecoration: "none",
                     color: "black",
@@ -49,11 +51,7 @@ export default function BuyProduct() {
                         pt: "10px",
                       }}
                     >
-                      <img
-                        src={"http://localhost:3000" + img}
-                        alt="images"
-                        width="100%"
-                      />
+                      <img src={`${url}/${image}`} alt="images" width="100%" />
                     </Box>
                     <Typography
                       sx={{
@@ -61,7 +59,8 @@ export default function BuyProduct() {
                       }}
                       variant="h7"
                     >
-                      {title}
+                      {name}
+
                       <br />
                     </Typography>
                     <Typography
@@ -80,7 +79,7 @@ export default function BuyProduct() {
                         mb: "10px",
                       }}
                     >
-                      {stock}
+                      Quantity 10
                     </Typography>
                   </Box>
                 </Link>

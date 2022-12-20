@@ -11,6 +11,7 @@ import boxtwo from "../assests/boxtwo.jpg";
 
 import Quotation from "./Quotation";
 import BuyProduct from "./BuyProduct";
+import { url } from "./Url";
 
 let product = [
   "Consumers Electronics",
@@ -26,7 +27,7 @@ let product = [
 export default function Slider() {
   const [displaypro, setDisplaypro] = React.useState([]);
   const getProduct = async () => {
-    await axios.get("http://localhost:3000/displayproduct").then((res) => {
+    await axios.get(`${url}/displayproduct`).then((res) => {
       setDisplaypro(res.data);
     });
   };
@@ -291,10 +292,7 @@ export default function Slider() {
                                       },
                                     }}
                                   >
-                                    <img
-                                      src={" http://localhost:3000" + img}
-                                      alt="img"
-                                    />
+                                    <img src={url + img} alt="img" />
                                   </Box>
                                   <Typography
                                     variant="h5"
