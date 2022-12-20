@@ -13,6 +13,7 @@ import {
   increasequantity,
   decreasequantity,
 } from "../Reduxtoolkit/Cart";
+import { url } from "./Url";
 
 export default function Cart() {
   const matches = useMediaQuery("(max-width:600px)");
@@ -57,7 +58,7 @@ export default function Cart() {
                     }}
                   >
                     <img
-                      src={"http://localhost:3000" + item?.img}
+                      src={`${url}/${item?.image}`}
                       alt="images"
                       style={{
                         width: matches ? "80%" : "100%",
