@@ -264,7 +264,6 @@ export default function Nav() {
                     sx={{
                       display: "flex",
                       justifyContent: "space-around",
-
                       alignItems: "center",
                     }}
                   >
@@ -324,22 +323,30 @@ export default function Nav() {
                         Messages
                       </Typography>
                     </Box>
-                    <Box>
-                      <MonetizationOnIcon
-                        sx={{
-                          fontSize: "30px",
-                          mt: "10px",
-                        }}
-                      />
-                      <Typography
-                        sx={{
-                          fontSize: "12px",
-                          color: "rbga(0,0,0,0.5)",
-                        }}
-                      >
-                        Oders
-                      </Typography>
-                    </Box>
+                    <Link
+                      to="/addproduct"
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box>
+                        <MonetizationOnIcon
+                          sx={{
+                            fontSize: "30px",
+                            mt: "10px",
+                          }}
+                        />
+                        <Typography
+                          sx={{
+                            fontSize: "12px",
+                            color: "rbga(0,0,0,0.5)",
+                          }}
+                        >
+                          Oders
+                        </Typography>
+                      </Box>
+                    </Link>
+
                     <Link
                       to="/cart"
                       style={{
